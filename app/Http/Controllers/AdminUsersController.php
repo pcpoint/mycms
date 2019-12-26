@@ -53,8 +53,7 @@ class AdminUsersController extends Controller
          }
          
         $input['password']= bcrypt($request->password);
-         User::create($input);
-        
+         User::create($input);    
     }
 
        
