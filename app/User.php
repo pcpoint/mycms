@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use App\Photo;
 use App\Role;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -39,5 +40,8 @@ class User extends Authenticatable
 
     public function role(){
         return $this->belongsTo('App\Role');
+    }
+    public function photo(){
+        return $this->belongsTo('App\Photo');
     }
 }
