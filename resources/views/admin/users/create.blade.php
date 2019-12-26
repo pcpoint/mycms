@@ -38,4 +38,6 @@
 </div>
 {!! Form::close() !!}
 
+@include('/includes.form_errors')
+
 @endsection
