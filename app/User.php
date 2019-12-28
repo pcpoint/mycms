@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use App\Post;
 use App\Photo;
 use App\Role;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -54,6 +55,10 @@ class User extends Authenticatable
     
         return false;
     
+     }
+
+     public function posts(){
+         return $this->hasMany('App\Post');
      }
      
 }
