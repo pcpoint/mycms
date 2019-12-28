@@ -47,15 +47,17 @@
 </div>
 
 <div class="form-group px-5">
-{!! Form::submit('Create User', ['class'=>'btn btn-primary']) !!}
+{!! Form::submit('Update User', ['class'=>'btn btn-primary']) !!}
 
 </div>
 {!! Form::close() !!}
 
 <div class="form-group">
+
     {!! form::open(['method'=>'DELETE', 'action' => ['AdminUsersController@destroy', $user->id]]) !!}
     <div class="form-group">
         {!! Form::submit('Delete user', ['class'=> 'btn btn-danger']) !!}
+        {!! Form::close() !!}
     </div>
 </div>
 
